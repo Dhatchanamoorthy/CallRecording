@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/llCallerPopup"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/cardview_light_background"
+                    android:orientation="vertical">
+
+                        <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/left_margin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintGuide_begin="6dp" />
+
+                        <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/right_margin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintGuide_end="6dp" />
+
+
+
+                <ImageView
+                    android:id="@+id/call_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    app:layout_constraintStart_toStartOf="@id/left_margin"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_call_black_24dp" />
+
+                        <TextView
+                            android:id="@+id/textViewNumber"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Go Bring Eggs"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toEndOf="@id/call_icon"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/textViewTime"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Completed"
+                            app:layout_constraintStart_toStartOf="@id/textViewNumber"
+                            app:layout_constraintTop_toBottomOf="@+id/textViewNumber" />
+
+                        <ImageView
+                            android:id="@+id/img_play"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="6dp"
+                            android:layout_marginTop="6dp"
+                            app:layout_constraintEnd_toEndOf="@id/right_margin"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/ic_play_circle_filled_black_24dp" />
+                        <View
+                            android:id="@+id/red_separator"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_below="@+id/textViewNumber"
+                            android:layout_marginBottom="6dp"
+                            android:layout_marginTop="6dp"
+                            android:background="@color/cardview_dark_background"
+                            app:layout_constraintTop_toBottomOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
